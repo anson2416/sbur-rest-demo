@@ -1,0 +1,18 @@
+http PUT pie.dev/put X-API-Token:123 name=John
+
+http :8080/coffees
+http localhost:8080/coffees
+http GET localhost:8080/coffees
+
+# Get coffee by ID
+http :8080/coffees/49e71f04-dfcd-427a-bdc0-985ab04e82a0
+
+# POST a coffee
+http POST :8080/coffees < coffee.json
+
+# PUT a coffee (update or add)
+http PUT :8080/coffees/6287925d < coffeeUpdate001.json
+http PUT :8080/coffees/628la002 < coffee002.json
+
+# Delete coffee by ID
+http DELETE :8080/coffees/6287925d
